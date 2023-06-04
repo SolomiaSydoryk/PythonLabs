@@ -36,11 +36,23 @@ class GameManager:
         for game in selected_games:
             print(game)
 
-    def print_dict_filter(self, _type):
+    def print_filtered_dict(self, _type):
         """Print filtered dictionary."""
         for game in self.games:
             print(f"\n{type(game).__name__} {game.title}")
             print(game.__dict_filter__(_type))
+
+    @staticmethod
+    def all_games_satisfy_condition(games):
+        """Searching for all games that match the condition"""
+        all_satisfy = all(game.min_players >= 1 for game in games)
+        return {"all": all_satisfy}
+
+    @staticmethod
+    def at_least_one_game_satisfies_condition(games):
+        """Searching for at least one game that match the condition"""
+        any_satisfy = any(game.max_players > 10 for game in games)
+        return {"any": any_satisfy}
 
     @property
     def games(self):

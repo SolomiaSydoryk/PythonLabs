@@ -1,10 +1,11 @@
 """Import abstract class Game from file PythonLabs.models.game."""
+from PythonLabs.exeptions.max_players import TooManyPlayersException, logged
 from PythonLabs.models.game import Game
 
 
 class BoardGame(Game):
     """Content of class BoardGame."""
-    def __init__(self, publisher, title, year, min_players, max_players, current_players=3):
+    def __init__(self, publisher, title, year, min_players, max_players, current_players=10):
         """
         Initializing a BoardGame instance.
 
@@ -20,12 +21,13 @@ class BoardGame(Game):
         super().__init__(publisher, title, year, min_players, max_players, features_set)
         self.current_players = current_players
 
+    @logged(TooManyPlayersException, 'file')
     def connect_player(self):
         """Player connection method."""
         if self.current_players < self.max_players:
             return self.current_players + 1
         else:
-            return 0
+            raise TooManyPlayersException("Maximum number of players already reached.")
 
     def disconnect_player(self):
         """Player disconnection method."""
