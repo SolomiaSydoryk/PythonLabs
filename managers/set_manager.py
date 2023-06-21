@@ -1,5 +1,5 @@
-"""Import class GameManager from file PythonLabs.managers.gameManager."""
-from PythonLabs.managers.game_manager import GameManager
+"""Import class GameManager from file managers.gameManager."""
+from managers.game_manager import GameManager
 
 
 class SetManager:
