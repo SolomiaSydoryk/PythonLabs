@@ -1,5 +1,5 @@
-"""Import abstract class Game from file PythonLabs.models.game."""
-from PythonLabs.models.game import Game
+"""Import abstract class Game from file models.game."""
+from models.game import Game
 
 
 class GameManager:
