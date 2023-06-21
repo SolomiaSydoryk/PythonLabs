@@ -27,5 +27,3 @@ class SetManager:
             raise StopIteration() from exc
         self._index += 1
         return item
-
-

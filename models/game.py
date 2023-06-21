@@ -4,7 +4,6 @@ from abc import ABC, abstractmethod
 
 class Game(ABC):
     """Content of abstract class Game."""
-
     def __init__(self, publisher, title, year, min_players, max_players, features_set):
         """
         Initializing a Game instance.
