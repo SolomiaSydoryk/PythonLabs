@@ -1,10 +1,10 @@
-"""Import class BoardGame, ComputerGame, MobileGame, VideoGame from file PythonLabs.models.
-and class GameManager from file PythonLabs.managers.gameManager."""
-from PythonLabs.models.board_game import BoardGame
-from PythonLabs.models.computer_game import ComputerGame
-from PythonLabs.models.mobile_game import MobileGame
-from PythonLabs.models.video_game import VideoGame
-from PythonLabs.managers.game_manager import GameManager
+"""Import class BoardGame, ComputerGame, MobileGame, VideoGame from file models.
+and class GameManager from file managers.gameManager."""
+from models.board_game import BoardGame
+from models.computer_game import ComputerGame
+from models.mobile_game import MobileGame
+from models.video_game import VideoGame
+from managers.game_manager import GameManager
 
 if __name__ == "__main__":
     game_manager = GameManager()
