@@ -1,6 +1,6 @@
-"""Import abstract class Game from file PythonLabs.models.game."""
-from PythonLabs.exeptions.max_players import TooManyPlayersException, logged
-from PythonLabs.models.game import Game
+"""Import abstract class Game from file models.game."""
+from exeptions.max_players import TooManyPlayersException, logged
+from models.game import Game
 
 
 class BoardGame(Game):
